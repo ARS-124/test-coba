@@ -1,7 +1,5 @@
 * {
     font-family: "Montserrat";
-    box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 html, body {
@@ -31,10 +29,6 @@ section {
     padding: 64px 128px;
 }
 
-img, iframe {
-    width: 100%;
-}
-
 .btn {
     background-color: #FFC108;
     color: white;
@@ -56,49 +50,14 @@ img, iframe {
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 5;
 }
 
 #header h1 {
     margin: 0;
-    /* animation: flash 1s infinite; */
-    animation: bounceIn 1s;
-}
-
-@keyframes bounceIn {
-    0% {
-        filter: opacity(0);
-        transform: translateY(-20px);
-    }
-    35% {
-        filter: opacity(0.25);
-        transform: translateY(0);
-    }
-    70% {
-        filter: opacity(0.5);
-        transform: translateY(-10px);
-    }
-    100% {
-        filter: opacity(1);
-        transform: translateY(0);
-    }
-}
-
-@keyframes flash {
-    from {
-        filter: opacity(0);
-    }
-    to {
-        filter: opacity(1);
-    }
 }
 
 nav > a {
     margin-left: 12px;
-}
-
-nav > a:hover {
-    color: #FFC108;
 }
 
 #landing {
@@ -127,7 +86,7 @@ nav > a:hover {
     width: 50%;
 }
 
-.about-stats {
+#about-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
@@ -153,21 +112,6 @@ nav > a:hover {
     justify-content: space-between;
 }
 
-.service-header h1 {
-    position: relative;
-}
-
-.service-header h1::before {
-    content: "";
-    width: 60px;
-    height: 60px;
-    background: url("./images/accent1.svg");
-    position: absolute;
-    left: -20px;
-    top: -10px;
-    z-index: -1;
-}
-
 .service-detail {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -179,17 +123,8 @@ nav > a:hover {
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-.service-detail-item:hover {
-    transform: scale(1.15);
-}
-
-.service-detail-item:hover img {
-    filter: grayscale(0);
-}
-
 .service-detail-item img {
     width: 100%;
-    filter: grayscale(1);
 }
 
 .service-detail-item h2 {
@@ -201,30 +136,11 @@ nav > a:hover {
     padding: 0 16px;
 }
 
-#contact h1 {
-    position: relative;
-}
-
-#contact > h1::before {
-    content: "";
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    background: url("./images/accent2.svg");
-    left: -20px;
-    top: -10px;
-    z-index: -1;
-}
-
 .contact-detail {
     display: flex;
     justify-content: space-between;
     margin-top: 72px;
     column-gap: 128px;
-}
-
-.contact-detail  > div .contact-detail > form {
-    width: 50%;
 }
 
 form {
@@ -242,10 +158,6 @@ form h1 {
 
 form button {
     border: none;
-}
-
-form button:hover {
-    cursor: pointer;
 }
 
 .form-group {
@@ -297,10 +209,6 @@ form button:hover {
     font-size: 20px;
 }
 
-.input-group input:focus {
-    border-bottom: 2px solid #FFC108;
-}
-
 footer {
     padding: 16px 128px;
     background-color: #FFC108;
@@ -318,66 +226,4 @@ footer p {
 .social-icon {
     display: flex;
     gap: 32px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .service-detail {
-        gap: 24px;
-    }
-
-    .contact-detail{
-        gap: 24px;
-    }
-
-    .form-group{
-        display: flex;
-        flex-direction: column ;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    #header, #footer {
-        padding: 16px 32px;
-    }
-
-    section {
-        padding: 64px 32px;
-    }
-}
-
-    #landing {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    #landing > div {
-        width: 100%;
-    }
-
-    #about {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #about > div {
-        width: 100%;
-    }
-
-    .service-detail {
-        gap: 16px;
-    }
-
-    .contact-detail {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 64px;
-    }
-
-.contact-detail form, .contact-detail > div {
-    width: 100%;
 }
